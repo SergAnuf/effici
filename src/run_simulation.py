@@ -4,6 +4,7 @@ import subprocess
 from eppy.modeleditor import IDF
 from config import EPLUS_PATH, IDF_PATH, IDD_PATH, WEATHER_PATH, MODIFIED_IDF, OUTPUT_DIR
 
+
 def configure_simulation():
     """
     Configures the EnergyPlus simulation by modifying the input IDF file.
@@ -24,7 +25,7 @@ def configure_simulation():
 
     # Modify thermostat setpoint temperature
     for thermostat in idf.idfobjects["THERMOSTATSETPOINT:SINGLEHEATING"]:
-        thermostat.Setpoint_Temperature = 22.0
+        thermostat.Setpoint_Temperature = 19.0
 
     # Update wall material conductivity
     for mat in idf.idfobjects["MATERIAL"]:

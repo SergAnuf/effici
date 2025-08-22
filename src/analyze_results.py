@@ -4,6 +4,7 @@ import sqlite3
 import pandas as pd
 from config import OUTPUT_DIR
 
+
 def analyze_output():
     """
     Analyzes the EnergyPlus simulation output stored in an SQLite database.

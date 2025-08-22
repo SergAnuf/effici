@@ -14,7 +14,7 @@ IDD_PATH = os.path.join(EPLUS_PATH, "Energy+.idd")
 WEATHER_PATH = os.path.join(EPLUS_PATH, "WeatherData", "USA_IL_Chicago-OHare.Intl.AP.725300_TMY3.epw")
 
 # Name of the modified IDF file that will be generated
-MODIFIED_IDF = "test_building.idf"
+MODIFIED_IDF = "../data/input/test_building.idf"
 
 # Directory where simulation output files will be stored
-OUTPUT_DIR = "simulation_output"
+OUTPUT_DIR = "../data/output/simulation_output"
