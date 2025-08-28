@@ -58,7 +58,7 @@ SizingPeriod:DesignDay,
     ,                         !- Daily WetBulb Temperature Range
     81198,                    !- Barometric Pressure
     3,                        !- Wind Speed
-    128,                      !- Wind Direction
+    200,                      !- Wind Direction
     No,                       !- Rain Indicator
     No,                       !- Snow Indicator
     No,                       !- Daylight Saving Time Indicator
@@ -86,7 +86,7 @@ SizingPeriod:DesignDay,
     ,                         !- Daily WetBulb Temperature Range
     81198,                    !- Barometric Pressure
     4.9,                      !- Wind Speed
-    128,                      !- Wind Direction
+    200,                      !- Wind Direction
     No,                       !- Rain Indicator
     No,                       !- Snow Indicator
     No,                       !- Daylight Saving Time Indicator
@@ -143,7 +143,7 @@ Material,
 Material:NoMass,
     R13LAYER,                 !- Name
     Rough,                    !- Roughness
-    2.321,                    !- Thermal Resistance
+    2.5,                      !- Thermal Resistance
     0.9,                      !- Thermal Absorptance
     0.75,                     !- Solar Absorptance
     0.75;                     !- Visible Absorptance
