@@ -18,3 +18,5 @@ MODIFIED_IDF = "../data/input/test_building.idf"
 
 # Directory where simulation output files will be stored
 OUTPUT_DIR = "../data/output/simulation_output"
+
+PARAMETERS_DIR = "../data/input/simulations_params.yaml"

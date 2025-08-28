@@ -1,0 +1,13 @@
+simulations:
+  - name: scenario_1
+    Wind_Direction: 11
+    Thermal_Resistance: 1.5
+  - name: scenario_2
+    Wind_Direction: 123
+    Thermal_Resistance: 2.7
+  - name: scenario_3
+    Wind_Direction: 231
+    Thermal_Resistance: 2.9
+  - name: scenario_4
+    Wind_Direction: 45
+    Thermal_Resistance: 3.2

@@ -1,37 +1,33 @@
 # src/run_simulation.py
 import os
+import yaml
 import subprocess
+import time
 from eppy.modeleditor import IDF
-from config import EPLUS_PATH, IDF_PATH, IDD_PATH, WEATHER_PATH, MODIFIED_IDF, OUTPUT_DIR
+from config import EPLUS_PATH, IDF_PATH, IDD_PATH, WEATHER_PATH, OUTPUT_DIR, PARAMETERS_DIR
 
 
-def configure_simulation():
+def configure_simulation(idf, thermal_resistance=2.321, wind_direction=128.0):
     """
     Configures the EnergyPlus simulation by modifying the input IDF file.
 
-    - Loads the IDD file required for working with IDF files.
-    - Modifies the thermostat setpoint temperature to 22°C.
-    - Updates the wall material conductivity to 0.5 W/m-K for testing purposes.
-    - Adds necessary output objects to the IDF file:
-        - `OUTPUT:SQLITE` for generating SQLite output.
-        - `OUTPUT:METER` for annual electricity and natural gas consumption.
-    - Saves the modified IDF file to the specified path.
+    Parameters:
+        idf (IDF): The IDF object to be modified.
+        thermal_resistance (float): The thermal resistance value to set for the specified material.
+        wind_direction (float): The wind direction value to set in the design day sizing period.
 
-    Raises:
-        None
+    Returns:
+        IDF: The modified IDF object.
     """
-    IDF.setiddname(IDD_PATH)  # Load the IDD file for EnergyPlus
-    idf = IDF(IDF_PATH, WEATHER_PATH)  # Load the baseline IDF file and weather data
+    # Modify material properties
+    material_name = "R13LAYER"
+    for mat in idf.idfobjects["MATERIAL:NOMASS"]:
+        if mat.Name.upper() == material_name.upper():
+            mat.Thermal_Resistance = thermal_resistance
 
-    # Modify thermostat setpoint temperature
-    for thermostat in idf.idfobjects["THERMOSTATSETPOINT:SINGLEHEATING"]:
-        thermostat.Setpoint_Temperature = 19.0
-
-    # Update wall material conductivity
-    for mat in idf.idfobjects["MATERIAL"]:
-        if "WALL" in mat.Name.upper():
-            print(f"Original wall conductivity for {mat.Name}: {mat.Conductivity}")
-            mat.Conductivity = 0.5
+    # Change wind direction in SizingPeriod:DesignDay
+    for spdd in idf.idfobjects["SIZINGPERIOD:DESIGNDAY"]:
+        spdd.Wind_Direction = wind_direction
 
     # Add output objects for SQLite and meter data
     idf.newidfobject("OUTPUT:SQLITE", Option_Type="SimpleAndTabular")
@@ -39,47 +35,90 @@ def configure_simulation():
     idf.newidfobject("OUTPUT:METER", Key_Name="NaturalGas:Facility", Reporting_Frequency="Annual")
 
     # Save the modified IDF file
-    idf.saveas(MODIFIED_IDF)
+    return idf
 
 
-def run_simulation():
+def run_simulation(modified_idf, output_folder):
     """
-    Runs the EnergyPlus simulation using the modified IDF file.
+    Runs the EnergyPlus simulation using the specified modified IDF file.
 
-    - Creates the output directory if it does not exist.
-    - Constructs the command to execute EnergyPlus with the following parameters:
-        - Weather file path.
-        - Output directory path.
-        - Modified IDF file path.
-    - Executes the EnergyPlus simulation using the subprocess module.
-    - Prints messages indicating the start and completion of the simulation.
+    Parameters:
+        modified_idf (str): Path to the modified IDF file.
+        output_folder (str): Path to the folder where simulation results will be stored.
 
     Raises:
         subprocess.CalledProcessError: If the EnergyPlus simulation fails.
     """
     # Ensure the output directory exists
-    os.makedirs(OUTPUT_DIR, exist_ok=True)
+    os.makedirs(output_folder, exist_ok=True)
 
     # Construct the command to run EnergyPlus
     cmd = [
         os.path.join(EPLUS_PATH, "energyplus"),
         "-w", WEATHER_PATH,
-        "-d", OUTPUT_DIR,
-        MODIFIED_IDF
+        "-d", output_folder,
+        modified_idf
     ]
 
     # Run the EnergyPlus simulation
-    print("Running EnergyPlus...")
+    print(f"Running simulation: {modified_idf}")
     subprocess.run(cmd, check=True)
-    print("Simulation complete.")
+    print(f"Simulation complete: {output_folder}")
+
+
+def main(yaml_file):
+    """
+    Main function to configure and run EnergyPlus simulations based on a parameter grid.
+
+    Parameters:
+        yaml_file (str): Path to the YAML file containing simulation parameters.
+
+    Workflow:
+        1. Loads the parameter grid from the YAML file.
+        2. Iterates over each simulation scenario in the parameter grid.
+        3. Configure the IDF file for each scenario.
+        4. Save the modified IDF file to the output folder.
+        5. Run the EnergyPlus simulation for each scenario.
+    """
+    # Set the IDD file for EnergyPlus
+    IDF.setiddname(IDD_PATH)
+
+    # Load parameter grid
+    with open(yaml_file, "r") as f:
+        params = yaml.safe_load(f)
+
+    # Iterate over simulation scenarios
+    for sim in params["simulations"]:
+        scenario_name = sim["name"]
+        output_folder = os.path.join(OUTPUT_DIR, scenario_name)
+        modified_idf = os.path.join(output_folder, f"{scenario_name}.idf")
+
+        # Load and configure the IDF file
+        idf = IDF(IDF_PATH, WEATHER_PATH)
+        idf = configure_simulation(
+            idf,
+            thermal_resistance=sim["Thermal_Resistance"],
+            wind_direction=sim["Wind_Direction"]
+        )
+
+        # Save modified IDF
+        os.makedirs(output_folder, exist_ok=True)
+        idf.saveas(modified_idf)
+
+        # Run simulation
+        run_simulation(modified_idf, output_folder)
 
 
 if __name__ == "__main__":
     """
-    Main entry point of the script.
+        Entry point of the script.
+    
+        - Loads the parameter grid from the specified YAML file.
+        - Configures and runs EnergyPlus simulations for each scenario in the parameter grid.
+        - Prints the total time taken to complete all simulations.
+        """
 
-    - Configures the simulation by modifying the IDF file.
-    - Runs the EnergyPlus simulation with the configured settings.
-    """
-    configure_simulation()
-    run_simulation()
+    start_time = time.time()
+    main(PARAMETERS_DIR)
+    end_time = time.time()
+    print(f"Time to complete: {end_time - start_time:.2f} seconds")
