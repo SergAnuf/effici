@@ -3,13 +3,13 @@
   <BuildingName>Simple One Zone (Wireframe DXF)</BuildingName>
   <EnvironmentName>RUN PERIOD 1</EnvironmentName>
   <WeatherFileLocationTitle>Chicago Ohare Intl Ap IL USA TMY3 WMO#=725300</WeatherFileLocationTitle>
-  <ProgramVersion>EnergyPlus, Version 25.1.0-68a4a7c774, YMD=2025.08.28 16:04</ProgramVersion>
+  <ProgramVersion>EnergyPlus, Version 25.1.0-68a4a7c774, YMD=2025.08.28 16:11</ProgramVersion>
   <SimulationTimestamp>
     <Date>
       2025-08-28
     </Date>
     <Time>
-      16:04:26
+      16:11:33
     </Time>
   </SimulationTimestamp>
 
@@ -1052,7 +1052,7 @@
   <for>Entire Facility</for>
   <General>
     <name>Value</name>
-    <ProgramVersionAndBuild>EnergyPlus, Version 25.1.0-68a4a7c774, YMD=2025.08.28 16:04</ProgramVersionAndBuild>
+    <ProgramVersionAndBuild>EnergyPlus, Version 25.1.0-68a4a7c774, YMD=2025.08.28 16:11</ProgramVersionAndBuild>
     <Runperiod>RUN PERIOD 1</Runperiod>
     <WeatherFile>Chicago Ohare Intl Ap IL USA TMY3 WMO#=725300</WeatherFile>
     <Latitude units="deg">

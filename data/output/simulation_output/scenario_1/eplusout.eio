@@ -1,4 +1,4 @@
-Program Version,EnergyPlus, Version 25.1.0-68a4a7c774, YMD=2025.08.28 15:55
+Program Version,EnergyPlus, Version 25.1.0-68a4a7c774, YMD=2025.08.28 16:15
 ! <Version>, Version ID
  Version, 25.1
 ! <Timesteps per Hour>, #TimeSteps, Minutes per TimeStep {minutes}
@@ -74,10 +74,10 @@ Surface Heat Transfer Algorithm, CTF - ConductionTransferFunction,200,0.10,1000.
 ! <Material CTF Summary>,Material Name,Thickness {m},Conductivity {w/m-K},Density {kg/m3},Specific Heat {J/kg-K},ThermalResistance {m2-K/w}
 ! <Material:Air>,Material Name,ThermalResistance {m2-K/w}
 ! <CTF>,Time,Outside,Cross,Inside,Flux (except final one)
- Construction CTF,R13WALL,   1,   1,   1,   0.250,     0.5000    ,   0.900,   0.900,   0.750,   0.750,Rough
- Material CTF Summary,R13LAYER,  0.0000,         0.000,      0.000,        0.000,   2.000    
+ Construction CTF,R13WALL,   1,   1,   1,   0.250,     0.6667    ,   0.900,   0.900,   0.750,   0.750,Rough
+ Material CTF Summary,R13LAYER,  0.0000,         0.000,      0.000,        0.000,   1.500    
  CTF,   1,       0.0000000    ,       0.0000000    ,      -0.0000000    ,      -0.0000000    
- CTF,   0,      0.50000000    ,      0.50000000    ,      0.50000000    
+ CTF,   0,      0.66666667    ,      0.66666667    ,      0.66666667    
  Construction CTF,FLOOR,   2,   1,   5,   0.250,      17.04    ,   0.900,   0.900,   0.650,   0.650,MediumRough
  Material CTF Summary,C5 - 4 IN HW CONCRETE,  0.1015,         1.730,   2242.585,      836.800,  0.5868E-01
  CTF,   5,     -0.41142049E-07,      0.15543709E-07,     -0.41142049E-07,      0.12297289E-10
@@ -104,21 +104,21 @@ Environment,DENVER CENTENNIAL  GOLDEN   N ANN HTG 99% CONDNS DB,SizingPeriod:Des
 Environment:Daylight Saving,No,SizingPeriod:DesignDay
 ! <Environment:Design Day Data>, Max Dry-Bulb Temp {C}, Temp Range {dC}, Temp Range Ind Type, Hum Ind Type, Hum Ind Value at Max Temp, Hum Ind Units, Pressure {Pa}, Wind Direction {deg CW from N}, Wind Speed {m/s}, Clearness, Rain, Snow
 ! <Environment:Design Day Misc>,DayOfYear,ASHRAE A Coeff,ASHRAE B Coeff,ASHRAE C Coeff,Solar Constant-Annual Variation,Eq of Time {minutes}, Solar Declination Angle {deg}, Solar Model
-Environment:Design Day Data,-15.50,0.00,DefaultMultipliers,Wetbulb,-15.50,{C},98934,120,3.0,0.00,No,No
+Environment:Design Day Data,-15.50,0.00,DefaultMultipliers,Wetbulb,-15.50,{C},98934,11,3.0,0.00,No,No
 Environment:Design Day Misc,355,1232.8,0.1424,5.7719E-002,1.0,2.45,-23.5,ASHRAEClearSky
-Environment:WarmupDays, 21
+Environment:WarmupDays, 18
 ! <Warmup Convergence Information>,Zone Name,Environment Type/Name,Average Warmup Temperature Difference {deltaC},Std Dev Warmup Temperature Difference {deltaC},Max Temperature Pass/Fail Convergence,Min Temperature Pass/Fail Convergence,Average Warmup Load Difference {W},Std Dev Warmup Load Difference {W},Heating Load Pass/Fail Convergence,Cooling Load Pass/Fail Convergence
- Warmup Convergence Information,ZONE ONE,SizingPeriod: DENVER CENTENNIAL  GOLDEN   N ANN HTG 99% CONDNS DB,1.4429751392E-005,1.7093055135E-006,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,ZONE ONE,SizingPeriod: DENVER CENTENNIAL  GOLDEN   N ANN HTG 99% CONDNS DB,1.3785340573E-005,1.9295124263E-006,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
 Environment,DENVER CENTENNIAL  GOLDEN   N ANN CLG 1% CONDNS DB=>MWB,SizingPeriod:DesignDay,07/21,07/21,SummerDesignDay,1,N/A,N/A,N/A,N/A,N/A,N/A,Clark and Allen
 Environment:Daylight Saving,No,SizingPeriod:DesignDay
-Environment:Design Day Data,32.00,15.20,DefaultMultipliers,Wetbulb,15.50,{C},98934,120,4.9,1.00,No,No
+Environment:Design Day Data,32.00,15.20,DefaultMultipliers,Wetbulb,15.50,{C},98934,11,4.9,1.00,No,No
 Environment:Design Day Misc,202,1084.4,0.2082,0.1365,1.0,-6.23,20.6,ASHRAEClearSky
-Environment:WarmupDays, 15
- Warmup Convergence Information,ZONE ONE,SizingPeriod: DENVER CENTENNIAL  GOLDEN   N ANN CLG 1% CONDNS DB=>MWB,8.6502061504E-002,3.8231692413E-002,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+Environment:WarmupDays, 13
+ Warmup Convergence Information,ZONE ONE,SizingPeriod: DENVER CENTENNIAL  GOLDEN   N ANN CLG 1% CONDNS DB=>MWB,0.1025888841,4.6389656610E-002,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
 Environment,RUN PERIOD 1,WeatherFileRunPeriod,01/01/2013,12/31/2013,Tuesday,365,Use RunPeriod Specified Day,Yes,Yes,No,Yes,Yes,Clark and Allen
 Environment:Daylight Saving,No,
-Environment:WarmupDays, 19
- Warmup Convergence Information,ZONE ONE,RunPeriod: RUN PERIOD 1,5.3004338945E-002,5.7319534303E-002,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+Environment:WarmupDays, 16
+ Warmup Convergence Information,ZONE ONE,RunPeriod: RUN PERIOD 1,6.3275674082E-002,7.0407922080E-002,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
 ! <Program Control Information:Threads/Parallel Sims>, Threading Supported,Maximum Number of Threads, Env Set Threads (OMP_NUM_THREADS), EP Env Set Threads (EP_OMP_NUM_THREADS), IDF Set Threads, Number of Threads Used (Interior Radiant Exchange), Number Nominal Surfaces, Number Parallel Sims
 Program Control:Threads/Parallel Sims, No,1, N/A, N/A, N/A, N/A, N/A, N/A
 End of Data

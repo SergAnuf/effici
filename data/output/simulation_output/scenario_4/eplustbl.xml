@@ -3,13 +3,13 @@
   <BuildingName>Simple One Zone (Wireframe DXF)</BuildingName>
   <EnvironmentName>RUN PERIOD 1</EnvironmentName>
   <WeatherFileLocationTitle>Chicago Ohare Intl Ap IL USA TMY3 WMO#=725300</WeatherFileLocationTitle>
-  <ProgramVersion>EnergyPlus, Version 25.1.0-68a4a7c774, YMD=2025.08.28 16:04</ProgramVersion>
+  <ProgramVersion>EnergyPlus, Version 25.1.0-68a4a7c774, YMD=2025.08.28 16:15</ProgramVersion>
   <SimulationTimestamp>
     <Date>
       2025-08-28
     </Date>
     <Time>
-      16:04:25
+      16:15:14
     </Time>
   </SimulationTimestamp>
 
@@ -1052,7 +1052,7 @@
   <for>Entire Facility</for>
   <General>
     <name>Value</name>
-    <ProgramVersionAndBuild>EnergyPlus, Version 25.1.0-68a4a7c774, YMD=2025.08.28 16:04</ProgramVersionAndBuild>
+    <ProgramVersionAndBuild>EnergyPlus, Version 25.1.0-68a4a7c774, YMD=2025.08.28 16:15</ProgramVersionAndBuild>
     <Runperiod>RUN PERIOD 1</Runperiod>
     <WeatherFile>Chicago Ohare Intl Ap IL USA TMY3 WMO#=725300</WeatherFile>
     <Latitude units="deg">
@@ -2674,7 +2674,7 @@
     <Layers>1</Layers>
     <Ctfs>1</Ctfs>
     <TimeStepHours>0.250</TimeStepHours>
-    <ThermalconductanceWM2K>0.6667</ThermalconductanceWM2K>
+    <ThermalconductanceWM2K>0.3125</ThermalconductanceWM2K>
     <Outerthermalabsorptance>0.900</Outerthermalabsorptance>
     <Innerthermalabsorptance>0.900</Innerthermalabsorptance>
     <Outersolarabsorptance>0.750</Outersolarabsorptance>
@@ -2716,7 +2716,7 @@
     <ConductivityWMK>0.000</ConductivityWMK>
     <DensityKgM3>0.000</DensityKgM3>
     <SpecificHeatJKgK>0.000</SpecificHeatJKgK>
-    <ThermalresistanceM2KW>1.500</ThermalresistanceM2KW>
+    <ThermalresistanceM2KW>3.200</ThermalresistanceM2KW>
   </MaterialCtfSummary>
   <MaterialCtfSummary>
     <name>t2</name>
@@ -2747,9 +2747,9 @@
   <Ctf>
     <name>t2</name>
     <Time>0</Time>
-    <Outside>0.66666667</Outside>
-    <Cross>0.66666667</Cross>
-    <Inside>0.66666667</Inside>
+    <Outside>0.31250000</Outside>
+    <Cross>0.31250000</Cross>
+    <Inside>0.31250000</Inside>
   </Ctf>
   <Ctf>
     <name>t3</name>
@@ -2893,9 +2893,9 @@
   </EnvironmentDaylightSaving>
   <EnvironmentWarmupdays>
     <name>Numberofwarmupdays</name>
-    <t1>18</t1>
-    <t2>13</t2>
-    <t3>16</t3>
+    <t1>26</t1>
+    <t2>19</t2>
+    <t3>24</t3>
   </EnvironmentWarmupdays>
   <EnvironmentDesignDayData>
     <name>t1</name>
@@ -2906,7 +2906,7 @@
     <HumIndValueAtMaxTemp>-15.50</HumIndValueAtMaxTemp>
     <HumIndUnits>{C}</HumIndUnits>
     <PressurePa>98934</PressurePa>
-    <WindDirectionDegCwFromN>11</WindDirectionDegCwFromN>
+    <WindDirectionDegCwFromN>45</WindDirectionDegCwFromN>
     <WindSpeedMS>3.0</WindSpeedMS>
     <Clearness>0.00</Clearness>
     <Rain>No</Rain>
@@ -2921,7 +2921,7 @@
     <HumIndValueAtMaxTemp>15.50</HumIndValueAtMaxTemp>
     <HumIndUnits>{C}</HumIndUnits>
     <PressurePa>98934</PressurePa>
-    <WindDirectionDegCwFromN>11</WindDirectionDegCwFromN>
+    <WindDirectionDegCwFromN>45</WindDirectionDegCwFromN>
     <WindSpeedMS>4.9</WindSpeedMS>
     <Clearness>1.00</Clearness>
     <Rain>No</Rain>
@@ -2953,8 +2953,8 @@
     <name>t1</name>
     <ZoneName>ZONE ONE</ZoneName>
     <EnvironmentTypeName>SizingPeriod: DENVER CENTENNIAL  GOLDEN   N ANN HTG 99% CONDNS DB</EnvironmentTypeName>
-    <AverageWarmupTemperatureDifferenceDeltac>1.3785340573E-005</AverageWarmupTemperatureDifferenceDeltac>
-    <StdDevWarmupTemperatureDifferenceDeltac>1.9295124263E-006</StdDevWarmupTemperatureDifferenceDeltac>
+    <AverageWarmupTemperatureDifferenceDeltac>2.0053323871E-005</AverageWarmupTemperatureDifferenceDeltac>
+    <StdDevWarmupTemperatureDifferenceDeltac>1.8147406756E-006</StdDevWarmupTemperatureDifferenceDeltac>
     <MaxTemperaturePassFailConvergence>Pass</MaxTemperaturePassFailConvergence>
     <MinTemperaturePassFailConvergence>Pass</MinTemperaturePassFailConvergence>
     <AverageWarmupLoadDifferenceW>0.0000000000</AverageWarmupLoadDifferenceW>
@@ -2966,8 +2966,8 @@
     <name>t2</name>
     <ZoneName>ZONE ONE</ZoneName>
     <EnvironmentTypeName>SizingPeriod: DENVER CENTENNIAL  GOLDEN   N ANN CLG 1% CONDNS DB=&gt;MWB</EnvironmentTypeName>
-    <AverageWarmupTemperatureDifferenceDeltac>0.1025888841</AverageWarmupTemperatureDifferenceDeltac>
-    <StdDevWarmupTemperatureDifferenceDeltac>4.6389656610E-002</StdDevWarmupTemperatureDifferenceDeltac>
+    <AverageWarmupTemperatureDifferenceDeltac>6.7436942869E-002</AverageWarmupTemperatureDifferenceDeltac>
+    <StdDevWarmupTemperatureDifferenceDeltac>2.9434002901E-002</StdDevWarmupTemperatureDifferenceDeltac>
     <MaxTemperaturePassFailConvergence>Pass</MaxTemperaturePassFailConvergence>
     <MinTemperaturePassFailConvergence>Pass</MinTemperaturePassFailConvergence>
     <AverageWarmupLoadDifferenceW>0.0000000000</AverageWarmupLoadDifferenceW>
@@ -2979,8 +2979,8 @@
     <name>t3</name>
     <ZoneName>ZONE ONE</ZoneName>
     <EnvironmentTypeName>RunPeriod: RUN PERIOD 1</EnvironmentTypeName>
-    <AverageWarmupTemperatureDifferenceDeltac>6.3275674082E-002</AverageWarmupTemperatureDifferenceDeltac>
-    <StdDevWarmupTemperatureDifferenceDeltac>7.0407922080E-002</StdDevWarmupTemperatureDifferenceDeltac>
+    <AverageWarmupTemperatureDifferenceDeltac>3.9887272575E-002</AverageWarmupTemperatureDifferenceDeltac>
+    <StdDevWarmupTemperatureDifferenceDeltac>4.1413879851E-002</StdDevWarmupTemperatureDifferenceDeltac>
     <MaxTemperaturePassFailConvergence>Pass</MaxTemperaturePassFailConvergence>
     <MinTemperaturePassFailConvergence>Pass</MinTemperaturePassFailConvergence>
     <AverageWarmupLoadDifferenceW>0.0000000000</AverageWarmupLoadDifferenceW>
@@ -2993,52 +2993,52 @@
   <for>Entire Facility</for>
   <AnnualHeatEmissionsSummary>
     <name>HeatEmissions</name>
-    <EnvelopeConvection>709.30</EnvelopeConvection>
+    <EnvelopeConvection>709.26</EnvelopeConvection>
     <ZoneExfiltration>0.00</ZoneExfiltration>
     <ZoneExhaustAir>0.00</ZoneExhaustAir>
     <HvacReliefAir>0.00</HvacReliefAir>
     <HvacRejectHeat>0.00</HvacRejectHeat>
-    <Total>709.31</Total>
+    <Total>709.27</Total>
   </AnnualHeatEmissionsSummary>
 </AnnualHeatEmissionsReport>
 <AnnualThermalResilienceSummary>
   <for>Entire Facility</for>
   <HeatIndexHours>
     <name>ZoneOne</name>
-    <Safe267C units="hr">8121.25</Safe267C>
-    <Caution267C322C units="hr">638.75</Caution267C322C>
+    <Safe267C units="hr">8122.25</Safe267C>
+    <Caution267C322C units="hr">637.75</Caution267C322C>
     <ExtremeCaution322C394C units="hr">0.00</ExtremeCaution322C394C>
     <Danger394C517C units="hr">0.00</Danger394C517C>
     <ExtremeDanger517C units="hr">0.00</ExtremeDanger517C>
   </HeatIndexHours>
   <HeatIndexHours>
     <name>Min</name>
-    <Safe267C units="hr">8121.25</Safe267C>
-    <Caution267C322C units="hr">638.75</Caution267C322C>
+    <Safe267C units="hr">8122.25</Safe267C>
+    <Caution267C322C units="hr">637.75</Caution267C322C>
     <ExtremeCaution322C394C units="hr">0.00</ExtremeCaution322C394C>
     <Danger394C517C units="hr">0.00</Danger394C517C>
     <ExtremeDanger517C units="hr">0.00</ExtremeDanger517C>
   </HeatIndexHours>
   <HeatIndexHours>
     <name>Max</name>
-    <Safe267C units="hr">8121.25</Safe267C>
-    <Caution267C322C units="hr">638.75</Caution267C322C>
+    <Safe267C units="hr">8122.25</Safe267C>
+    <Caution267C322C units="hr">637.75</Caution267C322C>
     <ExtremeCaution322C394C units="hr">0.00</ExtremeCaution322C394C>
     <Danger394C517C units="hr">0.00</Danger394C517C>
     <ExtremeDanger517C units="hr">0.00</ExtremeDanger517C>
   </HeatIndexHours>
   <HeatIndexHours>
     <name>Average</name>
-    <Safe267C units="hr">8121.25</Safe267C>
-    <Caution267C322C units="hr">638.75</Caution267C322C>
+    <Safe267C units="hr">8122.25</Safe267C>
+    <Caution267C322C units="hr">637.75</Caution267C322C>
     <ExtremeCaution322C394C units="hr">0.00</ExtremeCaution322C394C>
     <Danger394C517C units="hr">0.00</Danger394C517C>
     <ExtremeDanger517C units="hr">0.00</ExtremeDanger517C>
   </HeatIndexHours>
   <HeatIndexHours>
     <name>Sum</name>
-    <Safe267C units="hr">8121.25</Safe267C>
-    <Caution267C322C units="hr">638.75</Caution267C322C>
+    <Safe267C units="hr">8122.25</Safe267C>
+    <Caution267C322C units="hr">637.75</Caution267C322C>
     <ExtremeCaution322C394C units="hr">0.00</ExtremeCaution322C394C>
     <Danger394C517C units="hr">0.00</Danger394C517C>
     <ExtremeDanger517C units="hr">0.00</ExtremeDanger517C>
@@ -3125,40 +3125,40 @@
   </HeatIndexOccupiedhours>
   <HumidexHours>
     <name>ZoneOne</name>
-    <LittleToNoDiscomfort29 units="hr">8722.75</LittleToNoDiscomfort29>
-    <SomeDiscomfort2940 units="hr">37.25</SomeDiscomfort2940>
+    <LittleToNoDiscomfort29 units="hr">8735.00</LittleToNoDiscomfort29>
+    <SomeDiscomfort2940 units="hr">25.00</SomeDiscomfort2940>
     <GreatDiscomfortAvoidExertion4045 units="hr">0.00</GreatDiscomfortAvoidExertion4045>
     <Dangerous4550 units="hr">0.00</Dangerous4550>
     <HeatStrokeQuitePossible50 units="hr">0.00</HeatStrokeQuitePossible50>
   </HumidexHours>
   <HumidexHours>
     <name>Min</name>
-    <LittleToNoDiscomfort29 units="hr">8722.75</LittleToNoDiscomfort29>
-    <SomeDiscomfort2940 units="hr">37.25</SomeDiscomfort2940>
+    <LittleToNoDiscomfort29 units="hr">8735.00</LittleToNoDiscomfort29>
+    <SomeDiscomfort2940 units="hr">25.00</SomeDiscomfort2940>
     <GreatDiscomfortAvoidExertion4045 units="hr">0.00</GreatDiscomfortAvoidExertion4045>
     <Dangerous4550 units="hr">0.00</Dangerous4550>
     <HeatStrokeQuitePossible50 units="hr">0.00</HeatStrokeQuitePossible50>
   </HumidexHours>
   <HumidexHours>
     <name>Max</name>
-    <LittleToNoDiscomfort29 units="hr">8722.75</LittleToNoDiscomfort29>
-    <SomeDiscomfort2940 units="hr">37.25</SomeDiscomfort2940>
+    <LittleToNoDiscomfort29 units="hr">8735.00</LittleToNoDiscomfort29>
+    <SomeDiscomfort2940 units="hr">25.00</SomeDiscomfort2940>
     <GreatDiscomfortAvoidExertion4045 units="hr">0.00</GreatDiscomfortAvoidExertion4045>
     <Dangerous4550 units="hr">0.00</Dangerous4550>
     <HeatStrokeQuitePossible50 units="hr">0.00</HeatStrokeQuitePossible50>
   </HumidexHours>
   <HumidexHours>
     <name>Average</name>
-    <LittleToNoDiscomfort29 units="hr">8722.75</LittleToNoDiscomfort29>
-    <SomeDiscomfort2940 units="hr">37.25</SomeDiscomfort2940>
+    <LittleToNoDiscomfort29 units="hr">8735.00</LittleToNoDiscomfort29>
+    <SomeDiscomfort2940 units="hr">25.00</SomeDiscomfort2940>
     <GreatDiscomfortAvoidExertion4045 units="hr">0.00</GreatDiscomfortAvoidExertion4045>
     <Dangerous4550 units="hr">0.00</Dangerous4550>
     <HeatStrokeQuitePossible50 units="hr">0.00</HeatStrokeQuitePossible50>
   </HumidexHours>
   <HumidexHours>
     <name>Sum</name>
-    <LittleToNoDiscomfort29 units="hr">8722.75</LittleToNoDiscomfort29>
-    <SomeDiscomfort2940 units="hr">37.25</SomeDiscomfort2940>
+    <LittleToNoDiscomfort29 units="hr">8735.00</LittleToNoDiscomfort29>
+    <SomeDiscomfort2940 units="hr">25.00</SomeDiscomfort2940>
     <GreatDiscomfortAvoidExertion4045 units="hr">0.00</GreatDiscomfortAvoidExertion4045>
     <Dangerous4550 units="hr">0.00</Dangerous4550>
     <HeatStrokeQuitePossible50 units="hr">0.00</HeatStrokeQuitePossible50>
@@ -3448,7 +3448,7 @@
     <HumidityValue>-15.50</HumidityValue>
     <HumidityType>Wetbulb [C]</HumidityType>
     <WindSpeed units="m/s">3.00</WindSpeed>
-    <WindDirection>11.00</WindDirection>
+    <WindDirection>45.00</WindDirection>
   </SizingperiodDesignday>
   <SizingperiodDesignday>
     <name>DenverCentennialGoldenNAnnClg1CondnsDbMwb</name>
@@ -3457,7 +3457,7 @@
     <HumidityValue>15.50</HumidityValue>
     <HumidityType>Wetbulb [C]</HumidityType>
     <WindSpeed units="m/s">4.90</WindSpeed>
-    <WindDirection>11.00</WindDirection>
+    <WindDirection>45.00</WindDirection>
   </SizingperiodDesignday>
   <MonthlyPrecipitationSummary>
     <name>Jan</name>
@@ -3568,8 +3568,8 @@
     <Zone>ZONE ONE</Zone>
     <Space>ZONE ONE</Space>
     <Reflectance>0.25</Reflectance>
-    <UFactorWithFilm units="W/m2-K">0.606</UFactorWithFilm>
-    <UFactorNoFilm units="W/m2-K">0.667</UFactorNoFilm>
+    <UFactorWithFilm units="W/m2-K">0.299</UFactorWithFilm>
+    <UFactorNoFilm units="W/m2-K">0.312</UFactorNoFilm>
     <GrossArea units="m2">69.68</GrossArea>
     <NetArea units="m2">69.68</NetArea>
     <Azimuth units="deg">180.00</Azimuth>
@@ -3582,8 +3582,8 @@
     <Zone>ZONE ONE</Zone>
     <Space>ZONE ONE</Space>
     <Reflectance>0.25</Reflectance>
-    <UFactorWithFilm units="W/m2-K">0.606</UFactorWithFilm>
-    <UFactorNoFilm units="W/m2-K">0.667</UFactorNoFilm>
+    <UFactorWithFilm units="W/m2-K">0.299</UFactorWithFilm>
+    <UFactorNoFilm units="W/m2-K">0.312</UFactorNoFilm>
     <GrossArea units="m2">69.68</GrossArea>
     <NetArea units="m2">69.68</NetArea>
     <Azimuth units="deg">90.00</Azimuth>
@@ -3596,8 +3596,8 @@
     <Zone>ZONE ONE</Zone>
     <Space>ZONE ONE</Space>
     <Reflectance>0.25</Reflectance>
-    <UFactorWithFilm units="W/m2-K">0.606</UFactorWithFilm>
-    <UFactorNoFilm units="W/m2-K">0.667</UFactorNoFilm>
+    <UFactorWithFilm units="W/m2-K">0.299</UFactorWithFilm>
+    <UFactorNoFilm units="W/m2-K">0.312</UFactorNoFilm>
     <GrossArea units="m2">69.68</GrossArea>
     <NetArea units="m2">69.68</NetArea>
     <Azimuth units="deg">0.00</Azimuth>
@@ -3610,8 +3610,8 @@
     <Zone>ZONE ONE</Zone>
     <Space>ZONE ONE</Space>
     <Reflectance>0.25</Reflectance>
-    <UFactorWithFilm units="W/m2-K">0.606</UFactorWithFilm>
-    <UFactorNoFilm units="W/m2-K">0.667</UFactorNoFilm>
+    <UFactorWithFilm units="W/m2-K">0.299</UFactorWithFilm>
+    <UFactorNoFilm units="W/m2-K">0.312</UFactorNoFilm>
     <GrossArea units="m2">69.68</GrossArea>
     <NetArea units="m2">69.68</NetArea>
     <Azimuth units="deg">270.00</Azimuth>

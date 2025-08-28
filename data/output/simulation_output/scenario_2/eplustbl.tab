@@ -1,4 +1,4 @@
-Program Version	EnergyPlus, Version 25.1.0-68a4a7c774, YMD=2025.08.28 15:55
+Program Version	EnergyPlus, Version 25.1.0-68a4a7c774, YMD=2025.08.28 16:15
 Tabular Output Report in Format: 	Tab
 
 Building:	Simple One Zone (Wireframe DXF)
@@ -193,7 +193,7 @@ FOR:	Entire Facility
 General
 
 		Value
-	Program Version and Build	EnergyPlus, Version 25.1.0-68a4a7c774, YMD=2025.08.28 15:55
+	Program Version and Build	EnergyPlus, Version 25.1.0-68a4a7c774, YMD=2025.08.28 16:15
 	RunPeriod	RUN PERIOD 1
 	Weather File	Chicago Ohare Intl Ap IL USA TMY3 WMO#=725300
 	Latitude [deg]	41.98
@@ -627,7 +627,7 @@ OtherEquipment Internal Gains Nominal
 Construction CTF
 
 		Construction Name	Index	#Layers	#CTFs	Time Step {hours}	ThermalConductance {w/m2-K}	OuterThermalAbsorptance	InnerThermalAbsorptance	OuterSolarAbsorptance	InnerSolarAbsorptance	Roughness
-	1	R13WALL	1	1	1	0.250	0.4000	0.900	0.900	0.750	0.750	Rough
+	1	R13WALL	1	1	1	0.250	0.3704	0.900	0.900	0.750	0.750	Rough
 	2	FLOOR	2	1	5	0.250	17.04	0.900	0.900	0.650	0.650	MediumRough
 	3	ROOF31	3	1	1	0.250	0.1833	0.900	0.900	0.750	0.750	Rough
 
@@ -635,7 +635,7 @@ Construction CTF
 Material CTF Summary
 
 		Material Name	Thickness {m}	Conductivity {w/m-K}	Density {kg/m3}	Specific Heat {J/kg-K}	ThermalResistance {m2-K/w}
-	1	R13LAYER	0.0000	0.000	0.000	0.000	2.500
+	1	R13LAYER	0.0000	0.000	0.000	0.000	2.700
 	2	C5 - 4 IN HW CONCRETE	0.1015	1.730	2242.585	836.800	0.5868E-01
 	3	R31LAYER	0.0000	0.000	0.000	0.000	5.456
 
@@ -644,7 +644,7 @@ CTF
 
 		Time	Outside	Cross	Inside	Flux (except final one)
 	1	1	0.0000000	0.0000000	-0.0000000	-0.0000000
-	2	0	0.40000000	0.40000000	0.40000000	
+	2	0	0.37037037	0.37037037	0.37037037	
 	3	5	-0.41142049E-07	0.15543709E-07	-0.41142049E-07	0.12297289E-10
 	4	4	0.57884701E-03	0.22976293E-03	0.57884701E-03	-0.40580373E-06
 	5	3	-0.33051123	0.91914804E-01	-0.33051123	0.65922430E-03
@@ -692,16 +692,16 @@ Environment:Daylight Saving
 Environment:WarmupDays
 
 		NumberofWarmupDays
-	1	23
-	2	17
-	3	21
+	1	24
+	2	18
+	3	22
 
 
 Environment:Design Day Data
 
 		Max Dry-Bulb Temp {C}	Temp Range {dC}	Temp Range Ind Type	Hum Ind Type	Hum Ind Value at Max Temp	Hum Ind Units	Pressure {Pa}	Wind Direction {deg CW from N}	Wind Speed {m/s}	Clearness	Rain	Snow
-	1	-15.50	0.00	DefaultMultipliers	Wetbulb	-15.50	{C}	98934	200	3.0	0.00	No	No
-	2	32.00	15.20	DefaultMultipliers	Wetbulb	15.50	{C}	98934	200	4.9	1.00	No	No
+	1	-15.50	0.00	DefaultMultipliers	Wetbulb	-15.50	{C}	98934	123	3.0	0.00	No	No
+	2	32.00	15.20	DefaultMultipliers	Wetbulb	15.50	{C}	98934	123	4.9	1.00	No	No
 
 
 Environment:Design Day Misc
@@ -714,9 +714,9 @@ Environment:Design Day Misc
 Warmup Convergence Information
 
 		Zone Name	Environment Type/Name	Average Warmup Temperature Difference {deltaC}	Std Dev Warmup Temperature Difference {deltaC}	Max Temperature Pass/Fail Convergence	Min Temperature Pass/Fail Convergence	Average Warmup Load Difference {W}	Std Dev Warmup Load Difference {W}	Heating Load Pass/Fail Convergence	Cooling Load Pass/Fail Convergence
-	1	ZONE ONE	SizingPeriod: DENVER CENTENNIAL  GOLDEN   N ANN HTG 99% CONDNS DB	1.8768164369E-005	1.9533498197E-006	Pass	Pass	0.0000000000	0.0000000000	Pass	Pass
-	2	ZONE ONE	SizingPeriod: DENVER CENTENNIAL  GOLDEN   N ANN CLG 1% CONDNS DB=>MWB	7.5752129526E-002	3.2913079436E-002	Pass	Pass	0.0000000000	0.0000000000	Pass	Pass
-	3	ZONE ONE	RunPeriod: RUN PERIOD 1	4.6208083607E-002	4.9015287577E-002	Pass	Pass	0.0000000000	0.0000000000	Pass	Pass
+	1	ZONE ONE	SizingPeriod: DENVER CENTENNIAL  GOLDEN   N ANN HTG 99% CONDNS DB	1.8565096139E-005	1.8489880755E-006	Pass	Pass	0.0000000000	0.0000000000	Pass	Pass
+	2	ZONE ONE	SizingPeriod: DENVER CENTENNIAL  GOLDEN   N ANN CLG 1% CONDNS DB=>MWB	7.3314678409E-002	3.2019053042E-002	Pass	Pass	0.0000000000	0.0000000000	Pass	Pass
+	3	ZONE ONE	RunPeriod: RUN PERIOD 1	4.4112573461E-002	4.6470703305E-002	Pass	Pass	0.0000000000	0.0000000000	Pass	Pass
 
 
 ----------------------------------------------------------------------------------------------------
@@ -725,7 +725,7 @@ FOR:	Entire Facility
 Annual Heat Emissions Summary
 
 		Envelope Convection	Zone Exfiltration	Zone Exhaust Air	HVAC Relief Air	HVAC Reject Heat	Total
-	Heat Emissions [GJ]	709.27	0.00	0.00	0.00	0.00	709.28
+	Heat Emissions [GJ]	709.27	0.00	0.00	0.00	0.00	709.27
 
 
 ----------------------------------------------------------------------------------------------------
@@ -734,11 +734,11 @@ FOR:	Entire Facility
 Heat Index Hours
 
 		Safe (≤ 26.7°C) [hr]	Caution (> 26.7°C, ≤ 32.2°C) [hr]	Extreme Caution (> 32.2°C, ≤ 39.4°C) [hr]	Danger (> 39.4°C, ≤ 51.7°C) [hr]	Extreme Danger (> 51.7°C) [hr]
-	ZONE ONE	8121.75	638.25	0.00	0.00	0.00
-	Min	8121.75	638.25	0.00	0.00	0.00
-	Max	8121.75	638.25	0.00	0.00	0.00
-	Average	8121.75	638.25	0.00	0.00	0.00
-	Sum	8121.75	638.25	0.00	0.00	0.00
+	ZONE ONE	8122.75	637.25	0.00	0.00	0.00
+	Min	8122.75	637.25	0.00	0.00	0.00
+	Max	8122.75	637.25	0.00	0.00	0.00
+	Average	8122.75	637.25	0.00	0.00	0.00
+	Sum	8122.75	637.25	0.00	0.00	0.00
 
 
 Heat Index OccupantHours
@@ -764,11 +764,11 @@ Heat Index OccupiedHours
 Humidex Hours
 
 		Little to no Discomfort (≤ 29) [hr]	Some Discomfort (> 29, ≤ 40) [hr]	Great Discomfort; Avoid Exertion (> 40, ≤ 45) [hr]	Dangerous (> 45, ≤ 50) [hr]	Heat Stroke Quite Possible (> 50) [hr]
-	ZONE ONE	8733.00	27.00	0.00	0.00	0.00
-	Min	8733.00	27.00	0.00	0.00	0.00
-	Max	8733.00	27.00	0.00	0.00	0.00
-	Average	8733.00	27.00	0.00	0.00	0.00
-	Sum	8733.00	27.00	0.00	0.00	0.00
+	ZONE ONE	8733.50	26.50	0.00	0.00	0.00
+	Min	8733.50	26.50	0.00	0.00	0.00
+	Max	8733.50	26.50	0.00	0.00	0.00
+	Average	8733.50	26.50	0.00	0.00	0.00
+	Sum	8733.50	26.50	0.00	0.00	0.00
 
 
 Humidex OccupantHours
@@ -847,8 +847,8 @@ FOR:	Entire Facility
 SizingPeriod:DesignDay
 
 		Maximum Dry Bulb [C]	Daily Temperature Range [deltaC]	Humidity Value	Humidity Type	Wind Speed [m/s]	Wind Direction
-	DENVER CENTENNIAL  GOLDEN   N ANN HTG 99% CONDNS DB	-15.50	0.00	-15.50	Wetbulb [C]	3.00	200.00
-	DENVER CENTENNIAL  GOLDEN   N ANN CLG 1% CONDNS DB=>MWB	32.00	15.20	15.50	Wetbulb [C]	4.90	200.00
+	DENVER CENTENNIAL  GOLDEN   N ANN HTG 99% CONDNS DB	-15.50	0.00	-15.50	Wetbulb [C]	3.00	123.00
+	DENVER CENTENNIAL  GOLDEN   N ANN CLG 1% CONDNS DB=>MWB	32.00	15.20	15.50	Wetbulb [C]	4.90	123.00
 
 
 Monthly Precipitation Summary
@@ -914,10 +914,10 @@ FOR:	Entire Facility
 Opaque Exterior
 
 		Construction	Zone	Space	Reflectance	U-Factor with Film [W/m2-K]	U-Factor no Film [W/m2-K]	Gross Area [m2]	Net Area [m2]	Azimuth [deg]	Tilt [deg]	Cardinal Direction
-	ZN001:WALL001	R13WALL	ZONE ONE	ZONE ONE	0.25	0.377	0.400	69.68	69.68	180.00	90.00	S
-	ZN001:WALL002	R13WALL	ZONE ONE	ZONE ONE	0.25	0.377	0.400	69.68	69.68	90.00	90.00	E
-	ZN001:WALL003	R13WALL	ZONE ONE	ZONE ONE	0.25	0.377	0.400	69.68	69.68	0.00	90.00	N
-	ZN001:WALL004	R13WALL	ZONE ONE	ZONE ONE	0.25	0.377	0.400	69.68	69.68	270.00	90.00	W
+	ZN001:WALL001	R13WALL	ZONE ONE	ZONE ONE	0.25	0.351	0.370	69.68	69.68	180.00	90.00	S
+	ZN001:WALL002	R13WALL	ZONE ONE	ZONE ONE	0.25	0.351	0.370	69.68	69.68	90.00	90.00	E
+	ZN001:WALL003	R13WALL	ZONE ONE	ZONE ONE	0.25	0.351	0.370	69.68	69.68	0.00	90.00	N
+	ZN001:WALL004	R13WALL	ZONE ONE	ZONE ONE	0.25	0.351	0.370	69.68	69.68	270.00	90.00	W
 	ZN001:ROOF001	ROOF31	ZONE ONE	ZONE ONE	0.25	0.179	0.183	232.26	232.26	180.00	0.00	
 
 

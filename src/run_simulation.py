@@ -2,8 +2,9 @@
 import os
 import yaml
 import subprocess
+import time
 from eppy.modeleditor import IDF
-from config import EPLUS_PATH, IDF_PATH, IDD_PATH, WEATHER_PATH, MODIFIED_IDF, OUTPUT_DIR, PARAMETERS_DIR
+from config import EPLUS_PATH, IDF_PATH, IDD_PATH, WEATHER_PATH, OUTPUT_DIR, PARAMETERS_DIR
 
 
 def configure_simulation(idf, thermal_resistance=2.321, wind_direction=128.0):
@@ -75,9 +76,9 @@ def main(yaml_file):
     Workflow:
         1. Loads the parameter grid from the YAML file.
         2. Iterates over each simulation scenario in the parameter grid.
-        3. Configures the IDF file for each scenario.
-        4. Saves the modified IDF file to the output folder.
-        5. Runs the EnergyPlus simulation for each scenario.
+        3. Configure the IDF file for each scenario.
+        4. Save the modified IDF file to the output folder.
+        5. Run the EnergyPlus simulation for each scenario.
     """
     # Set the IDD file for EnergyPlus
     IDF.setiddname(IDD_PATH)
@@ -110,9 +111,14 @@ def main(yaml_file):
 
 if __name__ == "__main__":
     """
-    Entry point of the script.
+        Entry point of the script.
+    
+        - Loads the parameter grid from the specified YAML file.
+        - Configures and runs EnergyPlus simulations for each scenario in the parameter grid.
+        - Prints the total time taken to complete all simulations.
+        """
 
-    - Loads the parameter grid from the specified YAML file.
-    - Configures and runs EnergyPlus simulations for each scenario in the parameter grid.
-    """
+    start_time = time.time()
     main(PARAMETERS_DIR)
+    end_time = time.time()
+    print(f"Time to complete: {end_time - start_time:.2f} seconds")
